@@ -1,0 +1,22 @@
+h2 {
+	color: black;
+}
+h2 a {
+	--link-color: rgb(187, 45, 45);
+	position: relative;
+	color: var(--link-color);
+	text-decoration: none;
+}
+h2 a::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--link-color);
+	transition: width 0.3s ease-in-out;
+}
+h2 a:hover::after {
+	width: 100%;
+}
